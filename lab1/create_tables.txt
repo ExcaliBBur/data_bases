@@ -1,0 +1,61 @@
+CREATE TABLE human_condition (
+	ID SERIAL PRIMARY KEY,
+	Condition text UNIQUE
+);
+
+CREATE TABLE report (
+	ID SERIAL PRIMARY KEY,
+	Frequency text,
+	Content text,
+	Destination text
+);
+
+CREATE TABLE spaceship_type (
+	ID SERIAL PRIMARY KEY,
+	Type text UNIQUE
+);
+
+CREATE TABLE spaceship (
+	ID SERIAL PRIMARY KEY,
+	Name text,
+	Type integer,
+	Size text,
+	FOREIGN KEY (Type) REFERENCES spaceship_type(id) 
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+CREATE TABLE space_object (
+	ID SERIAL PRIMARY KEY,
+	Figure text,
+	Size text
+);
+
+CREATE TABLE flight (
+	ID SERIAL PRIMARY KEY,
+	Spaceship integer,
+	Space_object integer,
+	FOREIGN KEY (Spaceship) REFERENCES spaceship(id) 
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+	FOREIGN KEY (Space_object) REFERENCES space_object(id) 
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+CREATE TABLE human (
+	ID SERIAL PRIMARY KEY,
+	Name TEXT NOT NULL,
+	Human_condition INTEGER,
+	Report INTEGER,
+	Spaceship INTEGER,
+	FOREIGN KEY (Human_condition) REFERENCES human_condition(id) 
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+	FOREIGN KEY (Report) REFERENCES report(id) 
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+	FOREIGN KEY (Spaceship) REFERENCES spaceship(id) 
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);

@@ -1,0 +1,7 @@
+DROP TABLE flight;
+DROP TABLE human;
+DROP TABLE human_condition;
+DROP TABLE report;
+DROP TABLE space_object;
+DROP TABLE spaceship;
+DROP TABLE spaceship_type;

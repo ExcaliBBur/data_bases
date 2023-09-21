@@ -1,0 +1,27 @@
+INSERT INTO human_condition (Condition)
+VALUES ('thinking'),
+		('hallucinations');
+
+INSERT INTO report (Frequency, Content, Destination)
+VALUES ('Everyday', 'Some content 1', 'Control Center'),
+		('Everyweek', 'Some content 2', 'Earth');
+		
+INSERT INTO spaceship_type (Type)
+VALUES ('Space hotel'),
+		('Manned spaceship');
+		
+INSERT INTO spaceship (Name, Type, Size)
+VALUES ('Discovery', 2, 'Big'),
+		('Astroboy', 1, 'Small');
+		
+INSERT INTO space_object (Figure, Size)
+VALUES ('ellipse', 'Big'),
+		('circle', 'Small');
+		
+INSERT INTO flight (Spaceship, Space_object)
+VALUES (1, 1),
+		(2, 2);
+
+INSERT INTO human (Name, Human_condition, Report, Spaceship)
+VALUES ('Bowman', 1, 1, 1),
+		('Ilya', 2, 1, 2);
