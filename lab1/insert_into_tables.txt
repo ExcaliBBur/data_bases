@@ -22,6 +22,6 @@ INSERT INTO flight (Spaceship, Space_object)
 VALUES (1, 1),
 		(2, 2);
 
-INSERT INTO human (Name, Human_condition, Report, Spaceship)
-VALUES ('Bowman', 1, 1, 1),
-		('Ilya', 2, 1, 2);
+INSERT INTO human (Name, Age, Human_condition, Report, Spaceship)
+VALUES ('Bowman', 50, 1, 1, 1),
+		('Ilya', 20, 2, 1, 2);
