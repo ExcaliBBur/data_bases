@@ -8,3 +8,14 @@ DROP TABLE IF EXISTS dependency CASCADE;
 DROP TABLE IF EXISTS password CASCADE;
 DROP TABLE IF EXISTS item_category CASCADE;
 DROP TABLE IF EXISTS favourite CASCADE;
+
+DELETE FROM _user;
+DELETE FROM dependency;
+DELETE FROM favourite;
+DELETE FROM item;
+DELETE FROM item_category;
+DELETE FROM lot;
+DELETE FROM lot_cost_information;
+DELETE FROM lot_status_information;
+DELETE FROM lot_time_information;
+DELETE FROM password;
